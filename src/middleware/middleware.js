@@ -54,7 +54,7 @@ const reviewAuth = async function (req, res, next) {
   if (!mongoose.Types.ObjectId.isValid(bookId))
     return res.status(400).send({ status: false, message: "Invalid book ID" });
 
-  let bookData = await bookModel.findOne({ _id: bookId,isDeleted:false });
+  let bookData = await bookModel.findOne({ _id: bookId, isDeleted: false });
   if (!bookData)
     return res
       .status(404)

@@ -71,7 +71,7 @@ const createUser = async function (req, res) {
       return res.status(400).send({
         status: false,
         message:
-          "Password must be in the Range of 8 to 15 , please enter atleast 1 lowercase, 1 uppercase, 1 numeric character and one special character.",
+          "Password must be in the Range of 8 to 15.",
       });
     if(address){
      if(!address.street ||!address.city||!address.pincode ) return res.status(400).send({status: false, message: "please enter street, city and pincode"})
